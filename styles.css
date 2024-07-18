@@ -1,0 +1,526 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: white;
+    min-width: 280px;
+    background: url('images/background.webp') no-repeat center center/cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.section {
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.resume-button,
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121;
+    height: 40px;
+    width: 176px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-button a {
+    color: white;
+    text-decoration: none;
+}
+.resume-button:hover,
+.submit-button:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}
+
+/* section-1 */
+
+.section-1 {
+    z-index: 1;
+    color: rgb(5, 5, 5);
+}
+
+.heading {
+    text-align: center;
+    margin: 10px 0;
+    color: #000000;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    flex-wrap: wrap;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .1)
+}
+
+.brand {
+    height: 40px;
+    width: 150px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li a {
+    padding: 0 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: rgb(149, 148, 148);
+}
+
+/* section-2 */
+
+.section-2 {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+    margin: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.intro .name {
+    z-index: 1;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.intro .name .name-text {
+    color: black;
+    font-size: 40px;
+}
+
+.intro .name div {
+    font-size: 40px;
+}
+
+.intro .role {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* section-3 */
+
+.section-3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.hr {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.about-content {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.about-content .profile {
+    display: flex;
+}
+
+.about-content .text1 {
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    flex: 1 1 50%;
+    padding: 10px 10px;
+}
+
+.percentage {
+    display: inline-block;
+    color: #76c7c0;
+}
+
+.progress-container {
+    display: inline-block;
+    margin: 10px 0;
+    width: 100%;
+    height: 10px;
+    background-color: #979797;
+    border-radius: 25px;
+    position: relative;
+}
+
+.progress-bar {
+    height: 10px;
+    width: 0;
+    background-color: #ff0000;
+    border-radius: 25px 0 0 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 2s ease;
+}
+
+.progress-bar[data-progress="85"] {
+    width: 85%;
+}
+
+.progress-bar[data-progress="75"] {
+    width: 75%;
+}
+
+.progress-bar[data-progress="70"] {
+    width: 70%;
+}
+
+.progress-bar[data-progress="65"] {
+    width: 65%;
+}
+
+.progress-bar[data-progress="85"] {
+    width: 85%;
+}
+
+/* section-4 */
+.project-list {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.todo-app {
+    background-image: url('images/todoapp.avif');
+}
+
+.calculator {
+    background-image: url('images/calculator.jpg');
+}
+
+.rock-paper-scissor {
+    background-image: url('images/rock-paper-scissors.jpg');
+}
+
+.learning-log {
+    background-image: url('images/learning-log.jpg');
+}
+
+.project {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out, opacity 0.05s ease-in-out, filter 0.05s ease-in-out;
+    cursor: pointer;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    filter: brightness(1.2);
+}
+
+.project .content {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #76c7c0;
+    text-align: center;
+    padding: 50px 10px;
+    transition: bottom 0.7s ease;
+}
+
+.project:hover .content {
+    bottom: 0;
+}
+
+.content .title {
+    font-size: 20px;
+}
+
+.content .title a {
+    color: rgb(4, 0, 255);
+}
+
+.content .title a:hover {
+    color: black;
+}
+
+/* section-5 */
+.section-5 {
+    background-color: rgba(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.education-content {
+    margin: 15px;
+    text-align: center;
+}
+
+.college {
+    margin-bottom: 15px;
+}
+
+.marks {
+    font-size: 18px;
+    font-weight: 530;
+    padding: 8px 0;
+}
+
+.education-content .name {
+    padding: 8px 0;
+}
+
+/* section-6 */
+
+.section-6 {
+    display: flex;
+    justify-content: center;
+}
+
+.section-6 .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.contact-form {
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-form .div {
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #76c7c0;
+    outline: none;
+    box-shadow: 0 0 5px rgba(118, 199, 192, 0.5);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+.contact-form .warning {
+    border: 1px solid red;
+}
+
+.contact-form .warning-message {
+    color: red;
+    font-size: 0.8em;
+}
+
+.contact-form .submit-button {
+    height: 40px;
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.contact-info {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    color: white;
+}
+
+.contact-info .email,
+.contact-info .phone,
+.contact-info .other {
+    padding: 10px 0;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #76c7c0;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #529b9a;
+}
+
+.contact-info .other .linkedin,
+.contact-info .other .github {
+    margin: 7px 10px;
+    display: inline-block;
+}
+
+
+/*footer */
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #292a2a;
+    color: white;
+    width: 100%;
+}
+
+@media(max-width:428px) {
+    .skill {
+        flex: 1 1 100%;
+    }
+
+    .app {
+        flex: 1 1 100%;
+    }
+
+    .project .content {
+        bottom: 0;
+    }
+}
+
+.navbar .fa-solid{
+    display: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        padding: 10px 0;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 90vw;
+    }
+    .navbar .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    .navbar ul{
+        background: red;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        width: 200px;
+        padding-top: 50px; 
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    .navbar ul li{
+        display: inline-block;
+        margin: 10px;
+    }
+    .navbar ul .fa-solid{
+        position: absolute;
+        top: 25px;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 90vw;
+        max-width: 600px;
+    }
+
+    .contact-form {
+        width: 90vw;
+        max-width: 600px;
+    }
+
+    .intro .resume-button {
+        height: 40px;
+        width: 210px;
+    }
+}
